@@ -13,7 +13,8 @@ module.exports = {
     output: {
       filename: 'app.js',
       sourceMapFilename: 'app.js.map',
-    }
+    },
+    testSrc: `${src}/ts/**/*.ts`
   },
 
   css: {

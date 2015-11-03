@@ -5,9 +5,10 @@
   "main": "layout/index.jade",
   "scripts": {
     "init": "npm install -g gulp tsd && npm install",
+    "lint": "gulp lint",
     "build": "gulp build",
     "build:production": "NODE_ENV=production gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint"
   },
   "keywords": [
     "theme",
@@ -31,6 +32,7 @@
     "gulp-if": "^2.0.0",
     "gulp-postcss": "^6.0.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^3.5.0",
     "gulp-uglify": "^1.4.2",
     "postcss-import": "^7.1.0",
     "require-dir": "^0.3.0",

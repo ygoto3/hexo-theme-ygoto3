@@ -18,7 +18,7 @@ Modify `theme` setting in `_config.yml` to `ygoto3`.
 
 ### Requirements
 
-* Node.js 4.1.2~
+* Node.js 5.0.0~
 * TypeScript 1.6.0~
 * Jade
 * cssnext

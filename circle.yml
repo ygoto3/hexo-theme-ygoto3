@@ -1,0 +1,17 @@
+machine:
+  timezone:
+    Asia/Tokyo
+  node:
+    version: 5.0.0
+
+dependencies:
+  pre:
+    - npm install -g gulp
+  override:
+    - npm install
+  post:
+    - npm build:production
+
+test:
+  override:
+    - npm test

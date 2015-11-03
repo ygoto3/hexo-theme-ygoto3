@@ -1,4 +1,4 @@
-// Redirect temporarily
+// redirect temporarily
 
 interface IPMap {
   [key: string]: string;
@@ -29,13 +29,13 @@ function getParameter(name: string): string {
 
 function getUrlByParameter(param: string): string {
   let post = pMap[param];
-  if (!post) return "";
+  if (!post) { return ""; }
 
   return `/log/${post}/`;
 }
 
 function redirect(url: string): void {
-  if (!url) return;
+  if (!url) { return; }
   location.href = url;
 }
 
