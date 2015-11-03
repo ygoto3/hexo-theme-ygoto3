@@ -1,0 +1,16 @@
+:root {
+  --space: 20px;
+  --content-max-width: 500px;
+  --border-thickness: 5px;
+  --border-thickness-s: 2px;
+  --radius: 4px;
+
+  --font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+  --base-color: #fff;
+  --default-color: #444;
+  --sub-color: #aaa;
+  --weak-color: #ddd;
+  --text-color: var(--default-color);
+  --link-color: #258fb8;
+}

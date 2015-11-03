@@ -1,0 +1,43 @@
+mixin title(post)
+  if post
+    if post.title
+      = post.title
+    else
+      = __('No Title')
+
+mixin paginator(page)
+  if page.next || page.prev
+    nav.paginator.pure-g
+      .paginator__item.pure-u-1-2
+        if page.prev
+          a(href=url_for(page.prev_link ? page.prev_link : page.prev.path))= __('previous')
+      .paginator__item.pure-u-1-2
+        if page.next
+        a(href=url_for(page.next_link ? page.next_link : page.next.path))= __('next')
+
+mixin post(post, detailed)
+  - detailed = detailed || false
+
+  article.post
+    header
+      if detailed
+        h1.post__title
+          +title(post)
+      else
+        a(href=url_for(post.path)).post__title
+          h2
+            +title(post)
+    .post__entry
+      != post.content
+
+mixin introduction(config)
+  .introduction
+    h1.site-title= config.title
+    p.introduction__text= config.description
+
+mixin footer(config)
+  .footer
+    h2.site-title= config.title
+    p.copyright
+      | &copy; 2015&nbsp;
+      = config.author

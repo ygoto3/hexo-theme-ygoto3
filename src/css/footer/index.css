@@ -1,0 +1,5 @@
+.footer {
+  border-top: var(--border-thickness-s) solid var(--weak-color);
+  font-size: 12px;
+  padding-top: var(--space);
+}

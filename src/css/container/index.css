@@ -1,0 +1,29 @@
+.container {
+  padding-left: var(--space);
+  padding-right: var(--space);
+}
+
+.container-paginator {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(var(--space) * 2);
+  max-width: var(--content-max-width);
+}
+
+.container-posts {
+  margin-bottom: calc(var(--space) * 3);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--content-max-width);
+}
+
+.container-introduction {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--content-max-width);
+}
+
+.container-footer {
+  margin: var(--space) auto;
+  max-width: var(--content-max-width);
+}

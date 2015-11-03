@@ -1,0 +1,210 @@
+.post :matches(pre, code) {
+  font-family: font-mono;
+}
+
+.post code {
+  background: #f2f2f2;
+  padding: 0 0.3em;
+}
+
+.post pre {
+  padding: 20px;
+}
+
+.post .highlight {
+  margin: 0;
+  font-size: 14px;
+  background: #23241f;
+  border-radius: var(--radius);
+  padding: 15px 0;
+  overflow: auto;
+  color: #fff;
+  line-height: 16px;
+}
+
+.post .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.post .highlight table {
+  margin: 0;
+  width: auto;
+}
+
+.post .highlight td {
+  border: none;
+  padding: 0;
+}
+
+.post .highlight figcaption {
+  font-size: 0.85em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+.post .highlight figcaption::after {
+  clear: both;
+}
+
+.post .highlight figcaption a {
+  float: right;
+}
+
+.post .highlight .code pre {
+  padding-left: 0;
+}
+
+.post .highlight .gutter pre {
+  color: #666;
+  font-size: 0.85em;
+  text-align: right;
+}
+
+.post .highlight :matches(
+  .tag,
+  .css .rules,
+  .css .value,
+  .css .function
+  .preprocessor,
+  .pragma
+) {
+  color: #f8f8f2;
+}
+
+.post .highlight :matches(
+  .strongemphasis,
+  .strong,
+  .emphasis
+) {
+  color: #a8a8a2;
+}
+
+.post .highlight :matches(
+  .tag .value,
+  .code,
+  .title,
+  .css .class,
+  .class .title:last-child
+) {
+  color: #a6e22e;
+}
+
+.post .highlight :matches(
+  .link_url
+) {
+  font-size: 80%;
+}
+
+.post .highlight :matches(
+  .strong,
+  .strongemphasis
+) {
+  font-weight: bold;
+}
+
+.post .highlight :matches(
+  .emphasis,
+  .strongemphasis,
+  .class .title:last-child
+) {
+  font-style: italic;
+}
+
+.post .highlight :matches(
+  .keyword,
+  .function,
+  .change,
+  .winutils,
+  .flow,
+  .nginx .title,
+  .tex .special,
+  .header,
+  .attribute,
+  .symbol,
+  .symbol .string,
+  .tag .title,
+  .value,
+  .alias .keyword:first-child,
+  .css .tag,
+  .css .unit,
+  .css .important
+) {
+  color: #f92672;
+}
+
+.post .highlight :matches(
+  .function .keyword,
+  .class .keyword:first-child,
+  .constant,
+  .css .attribute
+) {
+  color: #66d9ef;
+}
+
+.post .highlight :matches(
+  .variable,
+  .params,
+  .class .title
+) {
+  color: #f8f8f2;
+}
+
+.post .highlight :matches(
+  .string,
+  .css .id,
+  .subst,
+  .type,
+  .ruby .class .parent,
+  .built_in,
+  .django .template_tag,
+  .django .variable,
+  .smalltalk .class,
+  .django .filter .argument,
+  .smalltalk .localvars,
+  .smalltalk .array,
+  .attr_selector,
+  .pseudo,
+  .addition,
+  .stream,
+  .envvar,
+  .apache .tag,
+  .apache .cbracket,
+  .tex .command,
+  .prompt,
+  .link_label,
+  .link_url
+) {
+  color: #e6db74;
+}
+
+.post .highlight :matches(
+  .comment,
+  .javadoc,
+  .annotation,
+  .decorator,
+  .template_comment,
+  .pi,
+  .doctype,
+  .deletion,
+  .shebang,
+  .apache .sqbracket,
+  .tex .formula
+) {
+  color: #75715e;
+}
+
+.post .highlight :matches(
+  .coffeescript .javascript,
+  .javascript .xml,
+  .tex .formula,
+  .xml .javascript,
+  .xml .vbscript,
+  .xml .css,
+  .xml .cdata,
+  .xml .php,
+  .php .xml
+) {
+  opacity: 0.5;
+}

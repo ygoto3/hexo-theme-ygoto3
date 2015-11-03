@@ -1,0 +1,14 @@
+body {
+  background-color: var(--base-color);
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

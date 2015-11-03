@@ -1,0 +1,8 @@
+.site-title {
+  border-bottom: var(--border-thickness) solid var(--default-color);
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  padding-bottom: 0.6em;
+}

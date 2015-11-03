@@ -1,0 +1,10 @@
+extends _layouts/base
+
+include _partials/helpers
+
+block title
+  title= `${page.title} | ${config.title}`
+
+block content
+  .container-posts
+    +post(page, true)

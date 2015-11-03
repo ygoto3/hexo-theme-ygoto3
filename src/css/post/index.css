@@ -1,0 +1,38 @@
+@import "./highlight";
+
+.post {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.post + .post {
+  margin-top: 4em;
+  padding-top: 2em;
+  position: relative;
+}
+
+.post + .post::before {
+  content: "";
+  background-color: var(--weak-color);
+  display: block;
+  height: 5px;
+  left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 10%;
+}
+
+.post__title {
+  color: var(--text-color);
+  text-align: left;
+  text-decoration: none;
+}
+
+.post__entry h3 {
+  border-bottom: 1px solid var(--weak-color);
+  font-weight: bold;
+  padding-bottom: 1em;
+}

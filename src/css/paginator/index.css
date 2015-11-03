@@ -1,0 +1,8 @@
+.paginator {
+  text-align: center;
+}
+
+.paginator__item + .paginator__item {
+  border-left: 1px solid var(--weak-color);
+  box-sizing: border-box;
+}

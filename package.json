@@ -1,0 +1,46 @@
+{
+  "name": "hexo-theme-ygoto3",
+  "version": "0.0.1",
+  "description": "Hexo theme for ygoto3.com",
+  "main": "layout/index.jade",
+  "scripts": {
+    "init": "npm install -g gulp tsd && npm install",
+    "build": "gulp build",
+    "build:production": "NODE_ENV=production gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "theme",
+    "blog",
+    "hexo",
+    "TypeScript",
+    "cssnext",
+    "Jade",
+    "Pure.css"
+  ],
+  "author": "Yusuke Goto",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "babel-core": "^6.0.20",
+    "babel-loader": "^6.0.1",
+    "css-loader": "^0.21.0",
+    "cssnano": "^3.3.2",
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.0",
+    "gulp-if": "^2.0.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2",
+    "postcss-import": "^7.1.0",
+    "require-dir": "^0.3.0",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.6.0",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2",
+    "webpack-stream": "^2.1.1"
+  },
+  "dependencies": {
+    "purecss": "^0.6.0"
+  }
+}

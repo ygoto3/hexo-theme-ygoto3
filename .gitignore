@@ -1,0 +1,7 @@
+# OS X files
+.DS_Store
+Thumbs.db
+
+# Generated files
+node_modules/
+source/
