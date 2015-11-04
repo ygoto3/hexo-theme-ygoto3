@@ -5,10 +5,8 @@ machine:
     version: 5.0.0
 
 dependencies:
-  pre:
-    - npm install -g gulp
   override:
-    - npm install
+    - npm run init
 
 test:
   override:
