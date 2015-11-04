@@ -31,7 +31,7 @@ function getUrlByParameter(param: string): string {
   let post = pMap[param];
   if (!post) { return ""; }
 
-  return `/log/${post}/`;
+  return `/posts/${post}/`;
 }
 
 function redirect(url: string): void {
