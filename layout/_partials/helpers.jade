@@ -32,12 +32,14 @@ mixin post(post, detailed)
 
 mixin introduction(config)
   .introduction
-    h1.site-title= config.title
+    a(href="/")
+      h1.site-title= config.title
     p.introduction__text= config.description
 
 mixin footer(config)
   .footer
-    h2.site-title= config.title
+    a(href="/")
+      h2.site-title= config.title
     p.copyright
       | &copy; 2015&nbsp;
       = config.author

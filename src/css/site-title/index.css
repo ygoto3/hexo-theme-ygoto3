@@ -1,5 +1,6 @@
 .site-title {
   border-bottom: var(--border-thickness) solid var(--default-color);
+  color: var(--default-color);
   display: inline-block;
   font-size: 1em;
   font-weight: bold;
