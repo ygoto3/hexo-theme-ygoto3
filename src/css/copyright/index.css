@@ -1,3 +1,10 @@
 .copyright {
   color: var(--sub-color);
 }
+
+.copyright__twitter {
+  bottom: 1px;
+  color: var(--sub-color);
+  margin-left: calc(var(--space)/4);
+  position: relative;
+}

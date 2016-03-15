@@ -16,7 +16,7 @@ block content
     .pure-u-1
       .container-posts
         for post in page.posts.toArray()
-          +post(post)
+          +post(post, config)
 
         .container-paginator
           +paginator(page)

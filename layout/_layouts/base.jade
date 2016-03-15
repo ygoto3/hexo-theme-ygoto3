@@ -1,3 +1,5 @@
+include ../_partials/helpers
+
 doctype html
 html(lang="ja")
 
@@ -6,12 +8,19 @@ html(lang="ja")
     meta(name="description", content=config.description)
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     block title
+    != open_graph({ twitter_id: config.twitter_id, twitter_card: config.twitter_card, fb_app_id: config.fb_app_id })
+    link(
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css"
+    )
     link(
       rel="stylesheet"
       href="/css/index.css"
     )
 
   body.container
+    +facebookSDK(config.fb_app_id)
+
     block content
 
     footer.pure-u-1

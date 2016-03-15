@@ -15,7 +15,7 @@ mixin paginator(page)
         if page.next
         a(href=url_for(page.next_link ? page.next_link : page.next.path))= __('next')
 
-mixin post(post, detailed)
+mixin post(post, config, detailed)
   - detailed = detailed || false
 
   article.post
@@ -29,12 +29,18 @@ mixin post(post, detailed)
             +title(post)
     .post__entry
       != post.content
+    .post__share
+      +twitterShareButton(post, config)
+      +facebookShareButton(config.url + url_for(post.path))
 
 mixin introduction(config)
   .introduction
     a(href="/")
       h1.site-title= config.title
-    p.introduction__text= config.description
+    p.introduction__text
+      = config.description
+      a(href="https://twitter.com/"+config.twitter_id).introduction__twitter
+        i.fa.fa-lg.fa-twitter-square
 
 mixin footer(config)
   .footer
@@ -43,3 +49,30 @@ mixin footer(config)
     p.copyright
       | &copy; 2015&nbsp;
       = config.author
+      a(href="https://twitter.com/"+config.twitter_id).copyright__twitter
+        i.fa.fa-lg.fa-twitter-square
+
+mixin twitterShareButton(post, config)
+  a(
+    href="https://twitter.com/share"
+    data-text=post.title
+    data-url=config.url+url_for(post.path)
+    data-via=config.twitter_id
+  ).twitter-share-button
+    | Tweet
+  script.
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+mixin facebookSDK(fbAppId)
+  #fb-root
+  script.
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=#{fbAppId}";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+mixin facebookShareButton(dataHref)
+  div(data-href=dataHref data-layout="button").fb-share-button

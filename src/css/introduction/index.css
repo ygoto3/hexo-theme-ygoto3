@@ -7,3 +7,10 @@
 .introduction__text {
   font-size: 12px;
 }
+
+.introduction__twitter {
+  bottom: 1px;
+  color: var(--default-color);
+  margin-left: calc(var(--space)/4);
+  position: relative;
+}

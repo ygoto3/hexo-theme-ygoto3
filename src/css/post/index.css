@@ -36,3 +36,16 @@
   font-weight: bold;
   padding-bottom: 1em;
 }
+
+.post__share {
+  margin-top: var(--space);
+  text-align: right;
+}
+
+.post__share .fb-share-button {
+  margin-left: calc(var(--space)*0.5);
+}
+
+.post__share .fb-share-button > span {
+  vertical-align: baseline !important;
+}
