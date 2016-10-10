@@ -2,7 +2,7 @@
   color: var(--sub-color);
 }
 
-.copyright__twitter {
+.copyright__icon {
   bottom: 1px;
   color: var(--sub-color);
   margin-left: calc(var(--space)/4);

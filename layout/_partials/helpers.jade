@@ -33,10 +33,13 @@ mixin post(post, config, detailed)
       +twitterShareButton(post, config)
       +facebookShareButton(config.url + url_for(post.path))
 
+mixin siteTitle(config)
+  a(href="/")
+    h1.site-title= config.title
+
 mixin introduction(config)
   .introduction
-    a(href="/")
-      h1.site-title= config.title
+    +siteTitle(config)
     p.introduction__text
       = config.description
       a(href="https://twitter.com/"+config.twitter_id).introduction__twitter
@@ -44,13 +47,24 @@ mixin introduction(config)
 
 mixin footer(config)
   .footer
-    a(href="/")
-      h2.site-title= config.title
-    p.copyright
-      | &copy; 2015&nbsp;
-      = config.author
-      a(href="https://twitter.com/"+config.twitter_id).copyright__twitter
-        i.fa.fa-lg.fa-twitter-square
+
+    .pure-g
+      .pure-u
+        img(
+          src=url_for(config.avatar)
+          width="80"
+          height="80"
+        ).footer__avatar
+      .pure-u-3-4
+        a(href="/")
+          h2.site-title= config.title
+        p.copyright.footer__copyright
+          | &copy; 2016&nbsp;
+          = config.author
+          a(href="https://twitter.com/"+config.twitter_id).copyright__icon
+            i.fa.fa-lg.fa-twitter-square
+          a(href="/"+config.feed.path).copyright__icon
+            i.fa.fa-lg.fa-rss-square
 
 mixin twitterShareButton(post, config)
   a(

@@ -3,3 +3,12 @@
   font-size: 12px;
   padding-top: var(--space);
 }
+
+.footer__avatar {
+  border-radius: 50%;
+  margin-right: var(--space);
+}
+
+.footer__copyright {
+  margin-top: 2px;
+}

@@ -6,5 +6,9 @@ block title
   title= `${page.title} | ${config.title}`
 
 block content
+
+  .container-introduction
+    +siteTitle(config)
+
   .container-posts
     +post(page, config, true)
