@@ -56,6 +56,10 @@
   padding-left: 0;
 }
 
+.post .highlight .code .line {
+  min-height: 1em;
+}
+
 .post .highlight .gutter pre {
   color: #666;
   font-size: 0.85em;

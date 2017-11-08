@@ -4,11 +4,11 @@
   "description": "Hexo theme for ygoto3.com",
   "main": "layout/index.jade",
   "scripts": {
-    "init": "npm install",
-    "lint": "$(npm bin)/gulp lint",
-    "build": "$(npm bin)/gulp build",
-    "build:production": "NODE_ENV=production $(npm bin)/gulp build",
-    "test": "npm run lint"
+    "init": "yarn",
+    "lint": "gulp lint",
+    "build": "gulp build",
+    "build:production": "NODE_ENV=production gulp build",
+    "test": "yarn lint"
   },
   "keywords": [
     "theme",
