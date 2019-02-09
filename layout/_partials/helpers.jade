@@ -27,6 +27,8 @@ mixin post(post, config, detailed)
         a(href=url_for(post.path)).post__title
           h2
             +title(post)
+    .post__date
+      != post.date.format('LL')
     .post__entry
       != post.content
     .post__share

@@ -31,6 +31,11 @@
   text-decoration: none;
 }
 
+.post__date {
+  font-size: 12px;
+  text-align: right;
+}
+
 .post__entry h3 {
   border-bottom: 1px solid var(--weak-color);
   font-weight: bold;
